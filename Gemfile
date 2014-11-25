@@ -1,3 +1,5 @@
+gem 'starter_generators', :git => "git://github.com/rbetina/starter_generators.git", :branch => "panels"
+
 source 'https://rubygems.org'
 
 
