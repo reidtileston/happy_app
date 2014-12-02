@@ -1,4 +1,4 @@
-gem 'starter_generators', :git => "git://github.com/rbetina/starter_generators.git", :branch => "panels"
+
 
 source 'https://rubygems.org'
 
@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'starter_generators', :git => "git://github.com/rbetina/starter_generators.git", :branch => "boothappdev"

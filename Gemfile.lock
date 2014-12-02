@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/rbetina/starter_generators.git
-  revision: ad9aae5237598f9afe87d5becba9e81ff0304fb0
-  branch: panels
+  revision: 53abc876892d78a754fe553881c3cba738dd9aca
+  branch: boothappdev
   specs:
     starter_generators (0.9.6)
 
