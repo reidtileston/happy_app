@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-
-# belongs_to: ?
+has_many :responses
 
 validates :firstname, :presence => true
 validates :lastname, :presence => true

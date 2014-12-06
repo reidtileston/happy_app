@@ -1,5 +1,6 @@
 class Answer < ActiveRecord::Base
-  belongs_to :user
+  has_many :possibilities
+  has_many :responses
 
   validates :text, :presence => true
 end

@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20141128224710) do
 
   create_table "possibilities", force: true do |t|
     t.integer  "answer_id"
-    t.integer  "video_id"
+    t.integer  "link_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20141128224710) do
   create_table "responses", force: true do |t|
     t.integer  "user_id"
     t.integer  "answer_id"
-    t.integer  "type_of_problem"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -15,6 +15,7 @@ class LinksController < ApplicationController
     @link = Link.new
     @link.video = params[:video]
 
+
     if @link.save
       redirect_to "/links", :notice => "Link created successfully."
     else

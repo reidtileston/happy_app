@@ -1,6 +1,7 @@
 class Possibility < ActiveRecord::Base
-  has_many: answers
-  belongs_to: user
+  belongs_to :answer
+  belongs_to :link
+
 
   validates :answer_id, :presence => true
 end

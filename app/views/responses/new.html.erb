@@ -7,9 +7,29 @@
   <% end %>
 <% end %>
 
-<div class="page-header">
+<!-- <div class="page-header">
   <h1>Add Response</h1>
-</div>
+</div> -->
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="lead">
+
+        <h1 class="text-center">Turn Your Frown Upside Down </h1>
+          <h2 class="text-center">There are no problems in life only solutions</h2>
+
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name">
+            <span class="input-group-addon"></span>
+          </div>
+          <div class="input-group">
+            <label for="Email">Email</label>
+            <input type="text" class="form-control">
+            <span class="input-group-addon"></span>
+          </div>
 
 <div class="row">
   <p>Type of problem</p>
@@ -34,12 +54,44 @@
         </label>
         <div class="col-sm-10">
 
-        <%= select_tag(:answer_id, options_from_collection_for_select(Answer.all, :id, :type_of_problem, @answer_id), :class => "form-control") %>
+        <%= select_tag(:answer_id, options_from_collection_for_select(Answer.all, :id, :text, @answer_id), :class => "form-control") %>
 
 
         </div>
 
       </div>
+
+
+      <p>How bad is it?</p>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+              Please Choose
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">I've had better days</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pretty bad</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">I hate my life</a></li>
+
+            </ul>
+          </div>
+
+           <div class="col-md-12">
+    <form action="/create_response" class="form-horizontal">
+      <!-- Label and input for user_id -->
+      <div class="form-group">
+        <label for="user_id" class="col-sm-2 control-label">
+          User
+        </label>
+        <div class="col-sm-10">
+
+        <%= select_tag(:answer_id, options_from_collection_for_select(Answer.all, :id, :text, @answer_id), :class => "form-control") %>
+
+
+        </div>
+
+      </div>
+
 
       <!-- Label and input for answer_id -->
       <div class="form-group">
@@ -64,7 +116,7 @@
   <div class="col-md-offset-3 col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Add Response</h3>
+        <!-- <h3 class="panel-title">Add Response</h3> -->
       </div>
       <div class="panel-body">
         <form action="/create_response" class="form-horizontal">

@@ -1,6 +1,5 @@
-class Video < ActiveRecord::Base
-belongs_to: possibility
-belongs_to: user
+class Link < ActiveRecord::Base
+has_many :possibilities
 
 validates :link, :presence => true
 
