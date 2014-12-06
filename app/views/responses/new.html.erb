@@ -12,6 +12,19 @@
 </div>
 
 <div class="row">
+  <p>Type of problem</p>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+              Please Choose
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Relationship headache</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Work challenge</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Just one of those days</a></li>
+
+            </ul>
+          </div>
   <div class="col-md-12">
     <form action="/create_response" class="form-horizontal">
       <!-- Label and input for user_id -->
@@ -20,8 +33,12 @@
           User
         </label>
         <div class="col-sm-10">
-          <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @response.user_id %>">
+
+        <%= select_tag(:answer_id, options_from_collection_for_select(Answer.all, :id, :type_of_problem, @answer_id), :class => "form-control") %>
+
+
         </div>
+
       </div>
 
       <!-- Label and input for answer_id -->
