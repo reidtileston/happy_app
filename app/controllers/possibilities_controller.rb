@@ -31,7 +31,7 @@ class PossibilitiesController < ApplicationController
     @possibility = Possibility.find(params[:id])
 
     @possibility.answer_id = params[:answer_id]
-    @possibility.video_id = params[:video_id]
+    @possibility.link_id = params[:link_id]
 
     if @possibility.save
       redirect_to "/possibilities", :notice => "Possibility updated successfully."
