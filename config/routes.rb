@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => 'users#new'
   # Routes for the Response resource:
   # CREATE
   get('/responses/new', { :controller => 'responses', :action => 'new' })
