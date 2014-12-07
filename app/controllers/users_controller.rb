@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user.email = params[:email]
 
     if @user.save
-      redirect_to "/users", :notice => "User created successfully."
+      redirect_to "/responses/new", :notice => "User created successfully."
     else
       render 'new'
     end

@@ -1,94 +1,50 @@
 
 
 <% if @response.errors.any? %>
-  <% @response.errors.full_messages.each do |message| %>
-    <div class="alert alert-dismissable alert-danger">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <%= message %>
-    </div>
-  <% end %>
+<% @response.errors.full_messages.each do |message| %>
+<div class="alert alert-dismissable alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <%= message %>
+</div>
+<% end %>
 <% end %>
 
 <!-- <div class="page-header">
   <h1>Add Response</h1>
 </div> -->
 
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="lead">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="lead">
 
         <h1 class="text-center">Turn Your Frown Upside Down </h1>
-          <h2 class="text-center">There are no problems in life only solutions</h2>
+        <h2 class="text-center">There are no problems in life only solutions</h2>
 
-          <div class="input-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name">
-            <span class="input-group-addon"></span>
-          </div>
-          <div class="input-group">
-            <label for="Email">Email</label>
-            <input type="text" class="form-control">
-            <span class="input-group-addon"></span>
-          </div>
-
-<div class="row">
-  <p>Type of problem</p>
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-              Please Choose
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Relationship headache</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Work challenge</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Just one of those days</a></li>
-
-            </ul>
-          </div>
-
-
-        <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :firstname, @user_id), :class => "form-control") %>
-
-
-        </div>
 
       </div>
 
 
-      <p>How bad is it?</p>
 
+<form action="/create_response" class="form-horizontal">
+      <!-- Label and input for text -->
+       <div class="row">
+          <p>Type of problem</p>
 
-        <%= select_tag(:answer_id, options_from_collection_for_select(Answer.all, :id, :text, @answer_id), :class => "form-control") %>
+          <%= select_tag(:answer_id, options_from_collection_for_select(Answer.all, :id, :text, @user_id), :class => "form-control") %>
 
-<div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-              Please Choose
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">I've had better days</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pretty bad</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">I hate my life</a></li>
+          <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :firstname, @user_id), :class => "form-control") %>
 
-            </ul>
-          </div>
         </div>
 
-      </div>
 
-      <!-- Label and input for answer_id -->
-
-
-
-   <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <input type="submit" value="Create Response" class="btn btn-primary">
-        </div>
-      </div>
-    </form>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Create Response" class="btn btn-primary">
+    </div>
   </div>
+</form>
 </div>
-
-
+</div>
