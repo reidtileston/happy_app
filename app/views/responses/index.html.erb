@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Responses</h1>
+  <h1>Response</h1>
 </div>
 
 <p><a href="/responses/new" class="btn btn-primary">Add a New Response</a></p>
@@ -18,8 +18,8 @@
   <tbody>
     <% @responses.each do |response| %>
       <tr>
-        <td><%= response.user_id %></td>
-        <td><%= response.answer_id %></td>
+        <td><%= response.user.firstname %></td>
+        <td><%= response.answer.text %></td>
         <td>
           <a href="/responses/<%= response.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>

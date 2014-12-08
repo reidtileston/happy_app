@@ -18,8 +18,8 @@
   <tbody>
     <% @possibilities.each do |possibility| %>
       <tr>
-        <td><%= possibility.answer_id %></td>
-        <td><%= possibility.link_id %></td>
+        <td><%= possibility.answer.text %></td>
+        <td><%= possibility.link.video %></td>
         <td>
           <a href="/possibilities/<%= possibility.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>

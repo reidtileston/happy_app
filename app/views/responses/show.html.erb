@@ -1,12 +1,12 @@
-<div class="page-header">
+<!-- <div class="page-header">
   <h1>Responses<%= @response.id %></h1>
-</div>
+</div> -->
 
 <dl class="dl-horizontal">
   <dt>User</dt>
-  <dd><%= @response.user_id %></dd>
+  <dd><%= @response.user.firstname %></dd>
 
   <dt>Answer</dt>
-  <dd><%= @response.answer_id %></dd>
+  <dd><%= @response.answer.text %></dd>
 
 </dl>
