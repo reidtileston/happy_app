@@ -5,6 +5,8 @@ class LinksController < ApplicationController
 
   def show
     @link = Link.find(params[:id])
+
+    redirect_to "/users#new", :notice => "Thank You."
   end
 
   def new

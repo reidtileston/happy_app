@@ -18,7 +18,7 @@ class AnswersController < ApplicationController
     @answer.text = params[:text]
 
     if @answer.save
-      redirect_to "/answers", :notice => "Answer created successfully."
+      redirect_to "/possibility", :notice => "Answer created successfully."
     else
       render 'new'
     end

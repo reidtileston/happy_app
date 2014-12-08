@@ -34,7 +34,7 @@ class PossibilitiesController < ApplicationController
     @possibility.link_id = params[:link_id]
 
     if @possibility.save
-      redirect_to "/possibilities", :notice => "Possibility updated successfully."
+      redirect_to "/links", :notice => "Possibility updated successfully."
     else
       render 'edit'
     end
