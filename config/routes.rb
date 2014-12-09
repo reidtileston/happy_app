@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Action_plan resource:
+  # CREATE
+  get('/action_plans/new', { :controller => 'action_plans', :action => 'new' })
+  get('/create_action_plan', { :controller => 'action_plans', :action => 'create' })
+
+  # READ
+  get('/action_plans', { :controller => 'action_plans', :action => 'index' })
+  get('/action_plans/:id', { :controller => 'action_plans', :action => 'show' })
+
+  # UPDATE
+  get('/action_plans/:id/edit', { :controller => 'action_plans', :action => 'edit' })
+  get('/update_action_plan/:id', { :controller => 'action_plans', :action => 'update' })
+
+  # DELETE
+  get('/delete_action_plan/:id', { :controller => 'action_plans', :action => 'destroy' })
+  #------------------------------
+
   root :to => 'users#new'
   # Routes for the Response resource:
   # CREATE
@@ -66,6 +83,9 @@ Rails.application.routes.draw do
 
   # DELETE
   get('/delete_link/:id', { :controller => 'links', :action => 'destroy' })
+
+  #Thank You
+  get('/thank_you', { :controller => 'links', :action => 'thank_you' })
   #------------------------------
 
   # Routes for the User resource:

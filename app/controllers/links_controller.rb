@@ -34,11 +34,17 @@ class LinksController < ApplicationController
     @link.video = params[:video]
 
     if @link.save
-      redirect_to "/links", :notice => "Link updated successfully."
+      redirect_to "/link", :notice => "Link updated successfully."
     else
       render 'edit'
     end
   end
+
+  def thank_you
+
+
+  end
+
 
   def destroy
     @link = Link.find(params[:id])
