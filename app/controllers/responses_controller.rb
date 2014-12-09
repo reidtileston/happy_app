@@ -15,9 +15,10 @@ class ResponsesController < ApplicationController
     @response = Response.new
     @response.user_id = params[:user_id]
     @response.answer_id = params[:answer_id]
+    possibility = Possibility.find_by(answer_id: @response.answer_id)
 
     if @response.save
-      redirect_to "/link #{find_by.possibility_id}", :notice => "Response created successfully."
+      redirect_to "/links/#{possibility.link_id}", :notice => "Response created successfully."
     else
       render 'new'
     end
