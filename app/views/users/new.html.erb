@@ -1,3 +1,5 @@
+<div class="background-color">
+
 <% if @user.errors.any? %>
   <% @user.errors.full_messages.each do |message| %>
     <div class="alert alert-dismissable alert-danger">
@@ -8,8 +10,15 @@
 <% end %>
 
 <div class="page-header">
-  <h1>Welcome To Reid's Happy App</h1>
+
+  <h1></h1>
+
+  <h1 class="text-center">Welcome To Reid's Happy App</h1>
+        <h2 class="text-center">There are no problems in life only solutions</h2>
+
 </div>
+
+
 
 <div class="row">
   <div class="col-md-12">
@@ -51,6 +60,15 @@
       </div>
     </form>
   </div>
+  <div>
+  <div class="row">
+  <div class="col-md-12">
+  <div class="text-center">
+  <%= image_tag "Reid.jpg" %>
+  </div>
 </div>
+</div>
+
+
 
 
