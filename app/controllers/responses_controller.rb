@@ -17,7 +17,7 @@ class ResponsesController < ApplicationController
     @response.answer_id = params[:answer_id]
 
     if @response.save
-      redirect_to "/possibilities/<%= answer.id %>", :notice => "Response created successfully."
+      redirect_to "/link #{find_by.possibility_id}", :notice => "Response created successfully."
     else
       render 'new'
     end
