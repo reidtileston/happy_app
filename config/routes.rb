@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+  # devise_for :users
   # Routes for the Action_plan resource:
   # CREATE
+  root :to => 'users/sign_up'
   get('/action_plans/new', { :controller => 'action_plans', :action => 'new' })
   get('/create_action_plan', { :controller => 'action_plans', :action => 'create' })
 
@@ -15,9 +17,10 @@ Rails.application.routes.draw do
 
   # DELETE
   get('/delete_action_plan/:id', { :controller => 'action_plans', :action => 'destroy' })
+
   #------------------------------
 
-  root :to => 'users#new'
+
   # Routes for the Response resource:
   # CREATE
   get('/responses/new', { :controller => 'responses', :action => 'new' })
