@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   # Routes for the Action_plan resource:
   # CREATE
   get('/action_plans/new', { :controller => 'action_plans', :action => 'new' })
