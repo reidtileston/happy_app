@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # devise_for :users
   # Routes for the Action_plan resource:
   # CREATE
-  root :to => 'users/sign_up'
+  root :to => 'user/sign_up'
   get('/action_plans/new', { :controller => 'action_plans', :action => 'new' })
   get('/create_action_plan', { :controller => 'action_plans', :action => 'create' })
 
